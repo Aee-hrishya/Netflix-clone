@@ -1,0 +1,30 @@
+.card{
+
+    object-fit: contain;
+    width: 100%;
+    max-height: 100px;
+    margin-right: 10px;
+    transition: transform 450ms;
+   
+}
+
+.card:hover{
+    transform: scale(1.09);
+}
+
+.cards{
+
+    display: flex;
+    
+    /* To make the horizontal scroll bar */
+    overflow-y: hidden;
+    overflow-x: scroll;
+
+    /* So that when the images get larger on hovering we need to see the entire image */
+    padding: 20px;
+}
+
+/* This basically tells all the different browsers to hide the scrollbar but keep its funtionality */
+.cards::-webkit-scrollbar{
+    display: none;
+}
