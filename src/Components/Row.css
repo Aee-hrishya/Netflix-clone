@@ -1,3 +1,7 @@
+.row{
+    margin-left: 20px;
+}
+
 .card{
 
     object-fit: contain;
@@ -6,6 +10,15 @@
     margin-right: 10px;
     transition: transform 450ms;
    
+}
+
+.cardLarge{
+    max-height: 250px;
+}
+
+/* slightly bigger image size on hovering over the large card */
+.cardLarge:hover{
+    transform: scale(1.10);
 }
 
 .card:hover{
@@ -24,7 +37,7 @@
     padding: 20px;
 }
 
-/* This basically tells all the different browsers to hide the scrollbar but keep its funtionality */
+/* This basically tells all the different browsers to hide the scrollbar but keep its functionality */
 .cards::-webkit-scrollbar{
     display: none;
 }
