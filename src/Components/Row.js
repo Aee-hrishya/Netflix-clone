@@ -4,7 +4,7 @@ import "./Row.css";
 
 const imageURL = "https://image.tmdb.org/t/p/original/" //The base url to get the images
 
-function Row({title, fetchUrl}) {
+function Row({title, fetchUrl, largeRow}) {
 
     const [movies, setMovies] = useState([]); //An empty array of movies
 
@@ -15,7 +15,6 @@ function Row({title, fetchUrl}) {
         const request = await url.get(fetchUrl); //using axios to fetch data indirectly as we have already set up everything
 
         setMovies(request.data.results);//Setting the movies to the results that we got
-        console.log(request)
         return request;     
     };
 
@@ -35,7 +34,7 @@ function Row({title, fetchUrl}) {
                 {/* Each card inside the Row which are the films that we see */}
                 {
                     movies.map((movie)=>(
-                        <img key={movie.id} className='card' src={`${imageURL}${movie.poster_path}`} alt='movie_image'/> //Basically we append the image url with the poster_path to get the images(we need to do this in this API every API is different)
+                        <img key={movie.id} className={`card ${largeRow && "cardLarge"}`} src={`${imageURL}${ largeRow ? movie.poster_path : movie.backdrop_path }`} alt='movie_image'/> //Basically we append the image url with the poster_path to get the images(we need to do this in this API every API is different)
                     ))
                 }
             </div>   
