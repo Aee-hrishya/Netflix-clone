@@ -1,3 +1,19 @@
+# Netflix Clone
+
+This is a frontend clone of the popular movie streaming platform Netflix. The UI is designed to replicate the actual Netflix 
+Frontend experience. 
+
+## Technologies used
+ - React
+ - TMDB API
+ - react-youtube package
+ - movie-trailer package
+
+## Features
+ - Interactive user experience
+ - When clicked on the specific movie the trailer of that movie starts to play
+ - Evertime the app loads the top banner of the webpage displays a new movie
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
